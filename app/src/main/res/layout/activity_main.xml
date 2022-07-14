@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_grey_50"
+    tools:context=".views.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBar"
+        android:layout_alignParentTop="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="TRIOANGLE"
+            app:titleTextColor="@color/white">
+
+
+            <CheckBox
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="?selectableItemBackgroundBorderless"
+                android:id="@+id/checkAll"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pBar"
+            android:indeterminate="false"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ExpandableListView
+        android:id="@+id/recyclerView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@id/appBar"
+        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorRight"
+        android:divider="#A4C739"
+        android:dividerHeight="0.5dp"
+        android:layout_weight="1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="get checked items"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+</RelativeLayout>
